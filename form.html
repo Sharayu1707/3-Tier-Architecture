@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Name & Email Form</title>
+  <style>
+    :root{
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --danger: #ef4444;
+      --radius: 12px;
+      --shadow: 0 6px 20px rgba(15,23,42,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%);
+      padding:24px;
+      color:#0f172a;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      border:1px solid rgba(15,23,42,0.04);
+    }
+
+    h1{
+      font-size:20px;
+      margin:0 0 8px 0;
+      letter-spacing:-0.2px;
+    }
+    p.lead{
+      margin:0 0 20px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    form{
+      display:grid;
+      gap:14px;
+    }
+
+    label{
+      display:block;
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .input-group{
+      display:flex;
+      flex-direction:column;
+    }
+
+    input[type="text"],
+    input[type="email"]{
+      height:44px;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(15,23,42,0.08);
+      background:linear-gradient(180deg, #fff, #fbfdff);
+      outline:none;
+      font-size:15px;
+      transition:box-shadow .12s, border-color .12s, transform .06s;
+    }
+
+    input::placeholder{ color:#9aa3b2; font-size:14px; }
+
+    input:focus{
+      border-color: rgba(37,99,235,0.95);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.08);
+      transform: translateY(-1px);
+    }
+
+    .row{
+      display:flex;
+      gap:12px;
+    }
+
+    .btn{
+      height:44px;
+      border:0;
+      background:var(--accent);
+      color:#fff;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:15px;
+      transition:transform .08s, box-shadow .12s;
+    }
+    .btn:active{ transform:translateY(1px) }
+    .btn:disabled{ opacity:.6; cursor:not-allowed }
+
+    .help{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    /* small screens */
+    @media (max-width:420px){
+      .card{ padding:20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="form-title">
+    <h1 id="form-title">Join our list</h1>
+    <p class="lead">Enter your name and email to subscribe to updates.</p>
+
+    <form id="contactForm" action="#" method="post" novalidate>
+      <div class="input-group">
+        <label for="name">Full name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="e.g. Sharayu Nimbalkar"
+          required
+          minlength="2"
+          aria-required="true"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required
+          aria-required="true"
+        />
+      </div>
+
+      <div class="row" style="align-items:center; justify-content:space-between;">
+        <button class="btn" type="submit">Subscribe</button>
+        <div class="help" aria-live="polite">We won't share your email.</div>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    // small client-side validation helper (keeps UI friendly)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+
+      if (name.length < 2) {
+        alert('Please enter a valid name (at least 2 characters).');
+        form.name.focus();
+        return;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        form.email.focus();
+        return;
+      }
+
+      // replace with real submission (fetch/ajax) or let form submit to server
+      alert(`Thanks, ${name}! (email: ${email}) — replace this with server submission.`);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
