@@ -73,8 +73,6 @@ Secure with Security Groups (e.g., Web → App → DB).
 
 Deploy your web app on EC2 and connect it to RDS.
 
-📊 Architecture Diagram
-
 
 
 
