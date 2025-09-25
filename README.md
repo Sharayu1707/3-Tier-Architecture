@@ -4,7 +4,9 @@ Three-Tier Architecture on AWS
 
 This project demonstrates the deployment of a Three-Tier Architecture on AWS.
 The architecture separates the application into Presentation Layer, Application Layer, and Database Layer for scalability, security, and high availability.
-.
+
+🏗 Architecture Diagram  
+![Architecture](3-Tier.png)
 
 🏗️ Architecture Layers
 1️⃣ Presentation Layer (Frontend)
@@ -45,6 +47,8 @@ IAM Roles: For EC2 to securely access RDS or S3.
 
 VPC → Custom networking with public & private subnets
 
+![Architecture](img-1.png)
+
 EC2 → Web/App servers
 
 RDS → Database backend
@@ -72,8 +76,4 @@ Launch an RDS instance in private subnet for data storage.
 Secure with Security Groups (e.g., Web → App → DB).
 
 Deploy your web app on EC2 and connect it to RDS.
-
-🏗 Architecture Diagram  
-![Architecture](3-Tier.png)
-
 
