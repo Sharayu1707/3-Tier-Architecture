@@ -17,6 +17,8 @@ Hosts a web server (Apache/Nginx) serving HTML, CSS, JavaScript, or PHP.
 
 Handles all incoming user requests.
 
+![Architecture](img-7.png)
+
 2️⃣ Application Layer (Backend / Business Logic)
 
 Deployed on EC2 instances (Auto Scaling enabled).
@@ -49,9 +51,21 @@ VPC → Custom networking with public & private subnets
 
 ![Architecture](img-1.png)
 
+![Architecture](img-2.png)
+
+![Architecture](img-3.png)
+
+![Architecture](img-4.png)
+
 EC2 → Web/App servers
 
 RDS → Database backend
+
+![Architecture](img-5.png)
+
+
+![Architecture](img-6.png)
+
 
 ELB → Load balancing user traffic
 
@@ -76,4 +90,6 @@ Launch an RDS instance in private subnet for data storage.
 Secure with Security Groups (e.g., Web → App → DB).
 
 Deploy your web app on EC2 and connect it to RDS.
+
+![Architecture](img-8.png)
 
