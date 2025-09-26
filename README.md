@@ -17,7 +17,7 @@ Hosts a web server (Apache/Nginx) serving HTML, CSS, JavaScript, or PHP.
 
 Handles all incoming user requests.
 
-![Architecture](img-7.png)
+![Architecture](images/img-7.png)
 
 2️⃣ Application Layer (Backend / Business Logic)
 
@@ -49,22 +49,22 @@ IAM Roles: For EC2 to securely access RDS or S3.
 
 VPC → Custom networking with public & private subnets
 
-![Architecture](img-1.png)
+![Architecture](images/img-1.png)
 
-![Architecture](img-2.png)
+![Architecture](images/img-2.png)
 
-![Architecture](img-3.png)
+![Architecture](images/img-3.png)
 
-![Architecture](img-4.png)
+![Architecture](images/img-4.png)
 
 EC2 → Web/App servers
 
 RDS → Database backend
 
-![Architecture](img-5.png)
+![Architecture](images/img-5.png)
 
 
-![Architecture](img-6.png)
+![Architecture](images/img-6.png)
 
 
 ELB → Load balancing user traffic
@@ -91,5 +91,5 @@ Secure with Security Groups (e.g., Web → App → DB).
 
 Deploy your web app on EC2 and connect it to RDS.
 
-![Architecture](img-8.png)
+![Architecture](images/img-8.png)
 
