@@ -9,6 +9,8 @@ The architecture separates the application into Presentation Layer, Application 
 ![Architecture](images/3-Tier.png)
 
 🏗️ Architecture Layers
+
+
 1️⃣ Presentation Layer (Frontend)
 
 Runs on Amazon EC2 / Elastic Load Balancer (ALB).
@@ -19,6 +21,8 @@ Handles all incoming user requests.
 
 ![Architecture](images/img-7.png)
 
+
+
 2️⃣ Application Layer (Backend / Business Logic)
 
 Deployed on EC2 instances (Auto Scaling enabled).
@@ -26,6 +30,8 @@ Deployed on EC2 instances (Auto Scaling enabled).
 Contains the business logic (e.g., PHP, Python Flask, Node.js).
 
 Communicates between the frontend and the database securely.
+
+
 
 3️⃣ Database Layer
 
