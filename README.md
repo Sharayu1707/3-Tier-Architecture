@@ -35,6 +35,9 @@ Stores user data and application records.
 
 Runs in a private subnet (not directly accessible from the internet).
 
+![Architecture](images/img-5.png)
+
+
 🔐 Security
 
 Public Subnet: Presentation Layer (accessible to internet).
@@ -44,6 +47,10 @@ Private Subnet: Application + Database Layer.
 Security Groups & NACLs: Control inbound/outbound traffic.
 
 IAM Roles: For EC2 to securely access RDS or S3.
+
+![Architecture](images/img-6.png)
+
+
 
 ⚙️ AWS Services Used
 
@@ -60,12 +67,6 @@ VPC → Custom networking with public & private subnets
 EC2 → Web/App servers
 
 RDS → Database backend
-
-![Architecture](images/img-5.png)
-
-
-![Architecture](images/img-6.png)
-
 
 ELB → Load balancing user traffic
 
