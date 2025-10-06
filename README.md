@@ -6,6 +6,8 @@ This project demonstrates the deployment of a Three-Tier Architecture on AWS.
 The architecture separates the application into Presentation Layer, Application Layer, and Database Layer for scalability, security, and high availability.
 
 🏗 Architecture Diagram  
+
+
 ![Architecture](images/3-Tier.png)
 
 🏗️ Architecture Layers
