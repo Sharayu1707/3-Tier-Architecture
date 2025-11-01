@@ -1,47 +1,17 @@
 3-Tier-Architecture
 Three-Tier Architecture on AWS
-📌 Overview
+
+## Overview
 
 This project demonstrates the deployment of a Three-Tier Architecture on AWS.
 The architecture separates the application into Presentation Layer, Application Layer, and Database Layer for scalability, security, and high availability.
 
-🏗 Architecture Diagram  
-
+## Architecture Diagram  
 
 ![Architecture](images/3-Tier.png)
 
-🏗️ Architecture Layers
 
-
-1️⃣ Presentation Layer (Frontend)
-
-Runs on Amazon EC2 / Elastic Load Balancer (ALB).
-
-Hosts a web server (Apache/Nginx) serving HTML, CSS, JavaScript, or PHP.
-
-Handles all incoming user requests.
-
-
-2️⃣ Application Layer (Backend / Business Logic)
-
-Deployed on EC2 instances (Auto Scaling enabled).
-
-Contains the business logic (e.g., PHP, Python Flask, Node.js).
-
-Communicates between the frontend and the database securely.
-
-
-
-3️⃣ Database Layer
-
-Uses Amazon RDS (MySQL/PostgreSQL) or Amazon Aurora.
-
-Stores user data and application records.
-
-Runs in a private subnet (not directly accessible from the internet).
-
-
-🔐 Security
+## Security
 
 Public Subnet: Presentation Layer (accessible to internet).
 
@@ -52,8 +22,7 @@ Security Groups & NACLs: Control inbound/outbound traffic.
 IAM Roles: For EC2 to securely access RDS or S3.
 
 
-
-⚙️ AWS Services Used
+## AWS Services Used
 
 VPC → Custom networking with public & private subnets
 
@@ -70,7 +39,7 @@ S3 (Optional) → Static content hosting / backups
 CloudWatch → Monitoring & logging
 
 
-🚀 Deployment Steps
+## Deployment Steps
 
 Step 1:
 
@@ -126,7 +95,7 @@ Deploy your web app on EC2 and connect it to RDS.
 ![Architecture](images/img-8.png)
 
 
-🧩 Conclusion
+## Conclusion
 
 The 3-tier architecture separates an application into three layers: presentation, logic, and data. This makes the system easier to manage, scale, and maintain.
 Each layer can be updated independently, improving performance, security, and overall reliability of the application.
